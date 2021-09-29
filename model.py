@@ -69,7 +69,7 @@ class Model:
 
         self.model.fit(fit_predict_data,                 # The training data no use
                        np.zeros((1, len(data.columns))), # The target data
-                       epochs=20,                        # Nb of iterations to train
+                       epochs=100,                        # Nb of iterations to train
                        shuffle=False)                    # Boolean (whether to shuffle the training data before each epoch) 
 
         return self.model.predict(fit_predict_data)[0]   # Compute allocation weight : prediction of weights with training dataset
